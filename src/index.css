@@ -1,0 +1,153 @@
+/* Colors live in custom properties so a theme can swap them in one place. */
+:root {
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --text: #172b40;
+  --muted: #4a5d70;
+  --border: #c6d0da;
+  --link: #0758a6;
+  --accent: #0f766e;
+  --focus: #a44800;
+}
+
+/* Dark theme: ThemeToggle sets data-theme on <html>; only the variables change. */
+[data-theme="dark"] {
+  --bg: #0f1720;
+  --surface: #1a2532;
+  --text: #e6edf3;
+  --muted: #a3b3c2;
+  --border: #33475b;
+  --link: #7cc4ff;
+  --accent: #2dd4bf;
+  --focus: #ffb366;
+  color-scheme: dark;
+}
+
+button[aria-pressed="true"] { border-color: var(--accent); }
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font: 1rem/1.6 system-ui, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+header, main, footer {
+  max-width: 60rem;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+/* Header: name on the left, navigation on the right; stacks on narrow screens. */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  border-bottom: 3px solid transparent;
+}
+nav a:hover { color: var(--text); }
+/* NavLink adds .active (and aria-current="page") to the current route. */
+nav a.active {
+  color: var(--text);
+  font-weight: 700;
+  border-bottom-color: var(--accent);
+}
+
+main { min-height: 60vh; }
+main:focus { outline: none; }
+
+h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.2; margin: 0.5rem 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.75rem; }
+h3 { font-size: 1.1rem; margin: 0 0 0.25rem; }
+
+a { color: var(--link); }
+
+.tagline { font-size: 1.15rem; color: var(--accent); font-weight: 600; margin-top: 0; }
+.meta { color: var(--muted); font-size: 0.95rem; margin: 0.25rem 0; }
+
+/* Cards: used for experience entries and project cards. */
+.card {
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.card h2 { font-size: 1.15rem; margin: 0 0 0.5rem; }
+.card ul { margin: 0.5rem 0 0; padding-left: 1.25rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: 1rem;
+}
+.grid .card { margin-bottom: 0; }
+
+/* Skills: label column + values on wide screens, stacked on phones. */
+.skills div {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.skills dt { font-weight: 700; }
+.skills dd { margin: 0; }
+@media (max-width: 40rem) {
+  .skills div { grid-template-columns: 1fr; gap: 0; }
+}
+
+label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+input {
+  width: 100%;
+  max-width: 30rem;
+  padding: 0.6rem;
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+}
+
+button {
+  font: inherit;
+  padding: 0.4rem 0.9rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+footer {
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+
+img { max-width: 100%; height: auto; }
+
+/* Keyboard focus must always be visible. */
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+.skip-link { position: absolute; left: -10000px; }
+.skip-link:focus { left: 1rem; top: 0.5rem; z-index: 10; }
