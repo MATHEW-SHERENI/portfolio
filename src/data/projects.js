@@ -1,5 +1,3 @@
-// Project entries from Mathew Shereni's resume.
-// Fields marked TODO still need your own words — don't leave them empty.
 
 export const projects = [
   {
@@ -12,7 +10,7 @@ export const projects = [
     problem: "Reading large amounts of web text slows down research.",
     role: "Built a Chrome extension using Java and Spring Boot to generate concise summaries of large web texts, streamlining research workflows.",
     approach: "Integrated Google Gemini API to enable AI-powered text analysis, allowing users to quickly extract key insights from web content.",
-    outcome: "achieved efficient research workflows with reduced reading time, and gained experience in AI integration and browser extension development.",
+    outcome: "Achieved efficient research workflows with reduced reading time, and gained experience in AI integration and browser extension development.",
   },
 
   
@@ -23,10 +21,10 @@ export const projects = [
     technologies: ["Java", "Spring Boot", "WebSocket", "STOMP", "Thymeleaf"],
     summary: "A chat app that delivers messages between users instantly.",
     link: "https://github.com/MATHEW-SHERENI/Real-time-chat-web-app",
-    problem: "Users need a platform for instant messaging in real-time. which is private and they own it",
+    problem: "Users need a platform for instant messaging in real-time. on a private they own",
     role: "Built a real-time chat application using Spring Boot, Java, WebSocket, STOMP, and Thymeleaf, enabling instant messaging between users.",
-    approach: "How STOMP topics route messages)?",
-    outcome: "achieved real-time communication with low latency, and learned about WebSocket protocols and message routing using STOMP.",
+    approach: "Implemented WebSocket protocols and message routing using STOMP to ensure low-latency communication, while leveraging Thymeleaf for dynamic user interfaces.",
+    outcome: "Achieved real-time communication with low latency, and learned about WebSocket protocols and message routing using STOMP.",
   },
   {
     slug: "ecommerce-web-app",
@@ -38,7 +36,7 @@ export const projects = [
     problem: "Students need a platform to showcase their full-stack development skills and understand the integration of frontend and backend technologies.",
     role: "Developed an Amazon-clone ecommerce web application with a Java backend and React frontend as a semester project.",
     approach: "Implemented a RESTful API with Spring Boot for the backend and used React for the frontend, ensuring seamless communication between the two.",
-    outcome: "fully functional ecommerce platform with integrated payment processing and AI chatbot.",
+    outcome: "Fully functional ecommerce platform with integrated payment processing and AI chatbot.",
   },
   {
     slug: "material-derailleur",
@@ -61,7 +59,7 @@ export const projects = [
       "BM25 / Hybrid Retrieval", "pytest", "GitLab CI",
     ],
     summary: "Local-first, fully cited, reproducible AI copilot for UN data. Built for the UN Tech Over Hackathon during UN Open Source Software Week.",
-    link: "", // TODO: paste the GitLab repo URL
+    link: "https://opensource.unicc.org/open-source-united-initiative/un-tech-over-2026/challenge-2/challenge-3-agentic-copilots-and-analytic-intelligence/the-7th-committee",
     problem: "Policy questions about UN data (e.g. child stunting in Nigeria vs. its neighbours) need answers that can be trusted and re-checked, without sensitive data leaving the machine.",
     role: "Built the retrieval layer, the 8-tab FastAPI + JS workbench, and the demo trust-signalling panels (live reproduce, evidence trace, metadata inspection) — all shipped with tests behind CI.",
     approach: "Six AI agents plan, retrieve, ground, verify, write, and critique an answer. Answers are grounded and cited from a local facts store, and the language model runs entirely on-box with a structural egress guard.",
