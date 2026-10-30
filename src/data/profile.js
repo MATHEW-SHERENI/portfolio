@@ -1,5 +1,4 @@
-// Content taken from Mathew Shereni's 2026 resume.
-// Phone number intentionally omitted from the public site.
+
 
 export const profile = {
   name: "Mathew Shereni",

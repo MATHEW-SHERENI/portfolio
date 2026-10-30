@@ -5,7 +5,7 @@ export default function ProjectDetail() {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
 
-  // The URL matched /projects/:slug, but no project has this slug.
+
   if (!project) {
     return (
       <section>

@@ -5,7 +5,7 @@ import ProjectCard from "../components/ProjectCard.jsx";
 export default function Projects() {
   const [query, setQuery] = useState("");
 
-  // Derived from data + state during render — no second copy in state, no Effect.
+  
   const normalized = query.trim().toLowerCase();
   const visible = projects.filter((p) =>
     `${p.title} ${p.category} ${p.technologies.join(" ")}`
