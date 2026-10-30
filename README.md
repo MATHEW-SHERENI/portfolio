@@ -89,17 +89,17 @@ The preference is per browser and origin. It is not shared across devices.
 | `npm run build` succeeds | ✅ |
 | GitHub Actions build + deploy jobs succeed | ✅ |
 | Live page, JS, and CSS load from `/portfolio/` (no 404s) | ✅ |
-| Nav links change the view without a full reload | ☐ |
-| Active nav link is highlighted; Home is not active on other pages | ☐ |
-| Filter: mixed case (`JAVA`), surrounding spaces (`  aws  `), no match (`xyz`), empty | ☐ |
-| Project card → detail page → Back to projects | ☐ |
-| `#/no-such-page` shows "Page not found" | ☐ |
-| `#/projects/no-such-project` shows "Project not found" | ☐ |
-| Refresh on a detail page on the live site keeps the page | ☐ |
-| Theme persists across navigation and refresh | ☐ |
-| Keyboard: skip link appears on first Tab; focus outline visible on all controls | ☐ |
-| Mobile width (~375px): single-column cards, no horizontal scroll | ☐ |
-| External links (GitHub, LinkedIn, demos) open correctly | ☐ |
+| Nav links change the view without a full reload | ✅ |
+| Active nav link is highlighted; Home is not active on other pages | ✅ |
+| Filter: mixed case (`JAVA`), surrounding spaces (`  aws  `), no match (`xyz`), empty | ✅ |
+| Project card → detail page → Back to projects | ✅ |
+| `#/no-such-page` shows "Page not found" | ✅ |
+| `#/projects/no-such-project` shows "Project not found" | ✅ |
+| Refresh on a detail page on the live site keeps the page | ✅ |
+| Theme persists across navigation and refresh | ✅ |
+| Keyboard: skip link appears on first Tab; focus outline visible on all controls | ✅ |
+| Mobile width (~375px): single-column cards, no horizontal scroll | ✅ |
+| External links (GitHub, LinkedIn, demos) open correctly | ✅ |
 
 ## Credits
 
